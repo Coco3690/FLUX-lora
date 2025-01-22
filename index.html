@@ -3,38 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image and Text</title>
+    <title>Flux-Lora_training</title>
     <style>
-       .container {
+      .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 20px;
         }
-       .image-container {
+      .image-set {
+            display: flex;
+            gap: 5px;
+            width: 100%;
+            justify-content: center;
+        }
+      .image-container {
             flex: 1;
             max-width: 300px;
         }
-       .image-container img {
+      .image-container img {
             width: 100%;
             height: auto;
             display: block;
         }
-       .text-container {
-            flex: 2;
-            max-width: 600px;
+      .text-container {
+            flex: 1;
+            max-width: 100%;
+            text-align: center;
+        }
+      .separator {
+            height: 20px;
+            width: 100%;
+            background-color: #ccc; /* 分隔线的颜色，可以根据需要修改 */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="image-container">
-            <img src="military-vehicle1.1_00001.png" alt="Image Description">
+        <!-- 第一组 -->
+        <div class="image-set">
+            <div class="image-container">
+                <img src="military-vehicle1.1_city.png" alt="military-vehicle1.1_city">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.1_sea.png" alt="military-vehicle1.1_sea">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.1_rural.png" alt="military-vehicle1.1_rural">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.1_mountain.png" alt="military-vehicle1.1_mountain">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.1_plain.png" alt="military-vehicle1.1_plain">
+            </div>
         </div>
         <div class="text-container">
-            <p>機器軍事戰車<br>權重1.1</p>
+            <p><strong style="font-size: larger;">【機器軍事戰車】</strong><br>權重：1.1<br>圖片生成：城市戰、海濱戰、鄉村戰、山地戰、平原戰。</p>
         </div>
+<!-- 分隔线 -->
+        <div class="separator"></div>
+        <!-- 以下代码被注释掉，将不会显示在页面上 -->
+        <!--
+        <div class="image-set">
+            <div class="image-container">
+                <img src="military-vehicle1.2_00001.png" alt="Image Description 6">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.2_00002.png" alt="Image Description 7">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.2_00003.png" alt="Image Description 8">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.2_00004.png" alt="Image Description 9">
+            </div>
+            <div class="image-container">
+                <img src="military-vehicle1.2_00005.png" alt="Image Description 10">
+            </div>
+        </div>
+        <div class="text-container">
+            <p>機器軍事戰車<br>權重1.2</p>
+        </div>
+        -->
+        <!-- 你可以继续添加更多组，复制上述的结构 -->
     </div>
 </body>
 </html>
