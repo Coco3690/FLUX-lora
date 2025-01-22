@@ -3,43 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flux-Lora_training</title>
+    <title>Flux-Lora Training</title>
     <style>
-     .container {
+        /* 全局样式 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 40px;
+            padding: 20px;
         }
-     .image-set {
-            display: flex;
-            gap: 5px;
+
+        .image-set {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
             width: 100%;
-            justify-content: center;
+            max-width: 1200px;
         }
-     .image-container {
-            flex: 1;
-            max-width: 300px;
+
+        .image-container {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
         }
-     .image-container img {
+
+        .image-container img {
             width: 100%;
             height: auto;
             display: block;
+            transition: transform 0.3s ease;
         }
-     .text-container {
-            flex: 1;
-            max-width: 100%;
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .text-container {
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
-    .separator {
-            height: 20px;
+
+        .text-container p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .text-container a {
+            display: inline-block;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .text-container a:hover {
+            text-decoration: underline;
+        }
+
+        .separator {
             width: 100%;
-            background-color: #ccc; /* 分隔线的颜色，可以根据需要修改 */
+            height: 2px;
+            background-color: #ddd;
+            margin: 20px 0;
         }
-     h1 {
-            font-weight: bold; /* 使字体加粗 */
-            text-align: center; /* 使标题居中 */
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .text-container p {
+                font-size: 0.9rem;
+            }
+
+            .text-container a {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -68,32 +126,10 @@
             <p><strong style="font-size: larger;">【機器軍事戰車】</strong><br>權重：1.1<br>圖片生成：城市戰、海濱戰、鄉村戰、山地戰、平原戰。</p>
             <a href="military-vehicle.safetensors">下載模型：military-vehicle.safetensors</a>
         </div>
-<!-- 分隔线 -->
+
         <div class="separator"></div>
-        <!-- 以下代码被注释掉，将不会显示在页面上 -->
-        <!--
-        <div class="image-set">
-            <div class="image-container">
-                <img src="military-vehicle1.2_00001.png" alt="Image Description 6">
-            </div>
-            <div class="image-container">
-                <img src="military-vehicle1.2_00002.png" alt="Image Description 7">
-            </div>
-            <div class="image-container">
-                <img src="military-vehicle1.2_00003.png" alt="Image Description 8">
-            </div>
-            <div class="image-container">
-                <img src="military-vehicle1.2_00004.png" alt="Image Description 9">
-            </div>
-            <div class="image-container">
-                <img src="military-vehicle1.2_00005.png" alt="Image Description 10">
-            </div>
-        </div>
-        <div class="text-container">
-            <p>機器軍事戰車<br>權重1.2</p>
-        </div>
-        -->
-        <!-- 你可以继续添加更多组，复制上述的结构 -->
+
+        <!-- 其他組可以依次添加 -->
     </div>
 </body>
 </html>
