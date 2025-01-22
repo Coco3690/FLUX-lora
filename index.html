@@ -5,41 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flux-Lora_training</title>
     <style>
-      .container {
+     .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 20px;
         }
-      .image-set {
+     .image-set {
             display: flex;
             gap: 5px;
             width: 100%;
             justify-content: center;
         }
-      .image-container {
+     .image-container {
             flex: 1;
             max-width: 300px;
         }
-      .image-container img {
+     .image-container img {
             width: 100%;
             height: auto;
             display: block;
         }
-      .text-container {
+     .text-container {
             flex: 1;
             max-width: 100%;
             text-align: center;
         }
-      .separator {
+    .separator {
             height: 20px;
             width: 100%;
             background-color: #ccc; /* 分隔线的颜色，可以根据需要修改 */
         }
+     h1 {
+            font-weight: bold; /* 使字体加粗 */
+            text-align: center; /* 使标题居中 */
+        }
     </style>
 </head>
 <body>
+    <h1>【Lora模型訓練展示】<br>可保持物體、人物、風格一致性</h1>
     <div class="container">
         <!-- 第一组 -->
         <div class="image-set">
@@ -61,6 +66,7 @@
         </div>
         <div class="text-container">
             <p><strong style="font-size: larger;">【機器軍事戰車】</strong><br>權重：1.1<br>圖片生成：城市戰、海濱戰、鄉村戰、山地戰、平原戰。</p>
+            <a href="military-vehicle.safetensors">下載模型：military-vehicle.safetensors</a>
         </div>
 <!-- 分隔线 -->
         <div class="separator"></div>
