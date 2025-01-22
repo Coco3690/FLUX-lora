@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image and Text</title>
+    <style>
+       .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+       .image-container {
+            flex: 1;
+            max-width: 300px;
+        }
+       .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+       .text-container {
+            flex: 2;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="military-vehicle1.1_00001.png" alt="Image Description">
+        </div>
+        <div class="text-container">
+            <p>This is the description of the image. You can write your text here. This layout is responsive, meaning it will adjust itself based on the screen size of the device. The image will not exceed 300px in width and the text container will not exceed 600px in width. They will stack vertically on smaller screens thanks to the flex-wrap property.</p>
+        </div>
+    </div>
+</body>
+</html>
